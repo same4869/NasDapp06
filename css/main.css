@@ -1,0 +1,118 @@
+/* 
+    Document   : main.css
+    Created on : 19-nov-2013, 15.47.44
+    Author     : Biagio Iannuzzi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    background-color: #9dc1ff;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-image: url(../sprites/bg_tile.jpg);    
+}
+
+* {
+    user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+
+::selection { background: transparent;color:inherit; }
+::-moz-selection { background: transparent;color:inherit; }
+
+#canvas{
+    width:768px;
+    height: 1024px;
+    
+    position: absolute;
+    
+    
+}
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering:-o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+	-ms-touch-action: none;
+}
+
+.ani_hack{
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* mobile webkit */
+}
+.footer {
+    margin-bottom: 10px;
+    background-color:#777777;
+    text-align: center;
+    color: white
+}
+/* Header */
+.htmleaf-header{
+	padding: 1em 190px 1em;
+	letter-spacing: -1px;
+	text-align: center;
+}
+.htmleaf-header h1 {
+	font-weight: 600;
+	font-size: 2em;
+	line-height: 1;
+	margin-bottom: 0;
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+.htmleaf-header h1 span {
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+	display: block;
+	font-size: 60%;
+	font-weight: 400;
+	padding: 0.8em 0 0.5em 0;
+	color: #c3c8cd;
+}
+.icon-xingyun {
+    margin-top: 0px;
+}
+.icon-xingyun span img {
+    width: 180px;
+}
+.rank-list-container {
+    margin-left: 40px
+}
+
+/***************FONTS*******************/
+
+@font-face {
+  font-family: 'ComicSansMS-Bold';
+  src: url('ComicSansMS-Bold.eot?#iefix') format('embedded-opentype'),  url('ComicSansMS-Bold.woff') format('woff'), url('ComicSansMS-Bold.ttf')  format('truetype'), url('ComicSansMS-Bold.svg#ComicSansMS-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'walibi0615bold';
+    src: url('walibi-holland-webfont.eot');
+    src: url('walibi-holland-webfont.eot?#iefix') format('embedded-opentype'),
+         url('walibi-holland-webfont.woff2') format('woff2'),
+         url('walibi-holland-webfont.woff') format('woff'),
+         url('walibi-holland-webfont.ttf') format('truetype'),
+         url('walibi-holland-webfont.svg#walibi0615bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
