@@ -157,10 +157,14 @@ $(document).ready(function(){
                                 var itemList = result;
                                 console.log(itemList);
                 for(var i = 0, iLen = itemList.length; i < iLen; i++) {
-                        html += '<li>' +
-                                        '<p class="item-content"><font color="red">玩家：'+ itemList[i].from + '<br>分数：' + itemList[i].score + '<br>昵称：' + itemList[i].name + '</font></p>' +
-                                                        '</li>';
-                                                        console.log(html);
+                        html += "<li class='player-item'>" +
+                                        "<div class='item-content'>" +
+                                                "<div class='row-item'><span class='name'>昵称: </span><span>" + itemList[i].name + "</span></div>" +
+                                                "<div class='row-item'><span class='score'>得分: </span><span>" + itemList[i].score + "</span></div>" +
+                                                "<div class='row-item'><span class='address'>ID: </span><span>" + itemList[i].from + "</span></div>" +
+                                        "</div>" +
+                                "</li>"
+                        console.log(html);
                 }
                 $('#itemList').append(html);
                 }).catch(function (err) {

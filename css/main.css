@@ -86,9 +86,6 @@ canvas {
 .icon-xingyun span img {
     width: 100px;
 }
-.rank-list-container {
-    margin-left: 40px
-}
 
 /***************FONTS*******************/
 
@@ -113,4 +110,19 @@ canvas {
 }
 .duck-header-image {
     margin-bottom: 30px;
+}
+.main-game {
+    margin-left: auto;
+    margin-right: auto;
+}
+.rank-list-container {
+    display: inline-block;
+    max-width: 200px;
+}
+.player-item span {
+    word-wrap: break-word;
+    text-align: left;
+}
+.player-item .row-item {
+    text-align: left;
 }
