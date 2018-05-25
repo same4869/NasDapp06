@@ -119,7 +119,7 @@ canvas {
     display: inline-block;
     max-width: 200px;
     margin-top: -50px;
-    margin-right: -50px;
+    margin-right: 0px;
 }
 .rank-list-table {
     width: 100%;
@@ -144,7 +144,7 @@ canvas {
 }
 .tips {
     width: 225px;
-    margin-left: -110px;
+    margin-left: -50px;
     height: fit-content;
     margin-top: -50px;
 }
@@ -153,9 +153,20 @@ canvas {
     margin-bottom: 10px;
     text-align: left;
 }
+.tips p a {
+    color: #007bff;
+}
 .tips-content {
     padding: 10px 10px;
     background-color: greenyellow;
     border-radius: 10px;
+}
+.footer2 p {
+    background-color: transparent;
+    color: black;
+    margin-top: 5px;
+}
+#wrapper .container {
+    padding-top: 0 !important;
 }
 
