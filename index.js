@@ -17,9 +17,9 @@ $(document).ready(function(){
         var nebPay
         var nebulas
         var name
-        dappContactAddress = "n1y5JWFiQFzQKHguiwMpStezMi4T52ZX3cg";
+        dappContactAddress = "n1vNgLrP89f2k8tave2efUiNUSdHYZEmgUD";
         nebulas = require("nebulas"), neb = new nebulas.Neb();
-        neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+        neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
     
         NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
         nebPay = new NebPay();
@@ -103,8 +103,8 @@ $(document).ready(function(){
         });
 
         $(oMain).on("save_score", function(evt,iScore) {
-                alert("您的得分为: "+iScore + "，请确认上链受人膜拜~");
-                updatePlayScore(iScore)
+                alert(name + "您的得分为: "+iScore + "，请确认上链受人膜拜~");
+                updatePlayScore(name,iScore)
         });
 
         $(oMain).on("restart", function(evt) {
@@ -123,11 +123,11 @@ $(document).ready(function(){
                 });
         }
             
-        function updatePlayScore(score){
+        function updatePlayScore(name, score){
                 var to = dappContactAddress;
                 var value = "0";
                 var callFunction = "updatePlayScore";
-                var callArgs = "[\"" + score + "\"]";
+                var callArgs = "[\"" + name + "\",\"" + score + "\"]";
                 console.log(callArgs);
                 serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
                         listener: function (resp) {
@@ -158,7 +158,7 @@ $(document).ready(function(){
                                 console.log(itemList);
                 for(var i = 0, iLen = itemList.length; i < iLen; i++) {
                         html += '<li>' +
-                                        '<p class="item-content"><font color="red">玩家：'+ itemList[i].name + '<br>分数：' + itemList[i].score + '<br>昵称：' + itemList[i].name + '</font></p>' +
+                                        '<p class="item-content"><font color="red">玩家：'+ itemList[i].from + '<br>分数：' + itemList[i].score + '<br>昵称：' + itemList[i].name + '</font></p>' +
                                                         '</li>';
                                                         console.log(html);
                 }

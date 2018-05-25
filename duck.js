@@ -36,20 +36,21 @@ DuckPlayerItems.prototype ={
         LocalContractStorage.set(from, name);
     },
 
-    updatePlayScore:function(score){
+    updatePlayScore:function(name,score){
         var from = Blockchain.transaction.from;
         var duckPlayerItem = this.duckers.get(from);
 
         if (!duckPlayerItem) {
             duckPlayerItem = {};
             duckPlayerItem.score = score;
-            duckPlayerItem.name = LocalContractStorage.get(from);
+            duckPlayerItem.name = name;
             duckPlayerItem.from = from;
             this.arrayMap.set(this.size, from);
             this.size += 1
             LocalContractStorage.set("size", this.size);
         }
 
+        duckPlayerItem.name = name;
         if(score > duckPlayerItem.score){
             duckPlayerItem.score = score
         }
