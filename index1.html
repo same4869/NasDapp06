@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>星云链打鸭子游戏</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="msapplication-tap-highlight" content="no"/>
+
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/createjs-2014.12.12.min.js"></script>
+        <script type="text/javascript" src="./dist/nebulas.js"></script>
+        <script type="text/javascript" src="./dist/nebPay.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        
+    </head>
+    <body ondragstart="return false;" ondrop="return false;" >
+        <header class="htmleaf-header">
+        <h1>Duck Shooter in Nebulas<span><br><font color="red">游戏说明：1.点击开始PLAY，在弹出框中输入玩家昵称，确定开始游戏。<br>2.键盘上下左右控制准星，空格键开枪，打中鸭子可以获得相应的积分。<br>游戏结束后可以上传积分，并显示在游戏榜中。</font></span></h1><br>
+        <div class="icon-xingyun">
+                        <span>
+                                <img src="./img/icon-xingyun1.png">
+                        </span>
+                </div>
+                <div class="noExtension" id="noExtension">
+                                友情提示：使用前请确保已经安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云链钱包</a> 喔~
+                </div>
+        </header>
+        <div style = "height: 800px">
+        <canvas id="canvas" class='ani_hack' width="1024" height="768" > </canvas>
+        </div>
+        <div class="rank-list-container">
+                        <h4>大神排行榜（显示单个玩家的最高分数）</h4>
+                        <ul class="rank-list" id="itemList">
+
+                        </ul>
+        </div>
+        <div class="footer">
+                <p>Copyright © 2018 same163 - Design: <a rel="nofollow" href="#" target="_parent">same163</a></p>
+                <p>感谢支持，欢迎大家关注星云链，发现更多更好DAPP</p>
+        </div>
+    </body>
+</html>

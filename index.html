@@ -1,167 +1,87 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>星云链打鸭子游戏</title>
-        <link rel="stylesheet" href="css/reset.css" type="text/css">
-        <link rel="stylesheet" href="css/main.css" type="text/css">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
 
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta name="msapplication-tap-highlight" content="no"/>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="ScoopThemes">
+    <meta name="ROBOTS" content="Bootstrap 3 Themes, Responsive Themes, Bootstrap 3 Responsive, Wordpress Themes, Clean Themes, Modern Themes, Flat Themes, Flat UI, UI Design, UX Design, Web design, responsive bootstrap, Jquery Plugins, Free Plugins, Premium Bootstrap themes, Bootstrap 3, Premium Web Templates, Bootstrap Templates, Bootstrap Responsive Templates, Admin, Dashboard, Admin Templates, Admin Responsive, Admin responsive themes">
+    <meta name="description" content="Solutions For Web Developers Form ( Web Templates, Web Themes, Jquery Plugins, UX Design.. ) Whatever They Need.">
+    <meta name="abstract" content="Solutions For Web Developers Form ( Web Templates, Web Themes, Jquery Plugins, UX Design.. ) Whatever They Need.">
+   
+    <meta name="author" content="www.scoopthemes.com">
+    <meta name="publisher" content="www.scoopthemes.com">
+    <meta name="copyright" content="www.scoopthemes.com">
+    <meta name="revisit-after" content="2 days">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
-        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-        <script type="text/javascript" src="js/createjs-2014.12.12.min.js"></script>
-        <script type="text/javascript" src="./dist/nebulas.js"></script>
-        <script type="text/javascript" src="./dist/nebPay.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        
-    </head>
-    <body ondragstart="return false;" ondrop="return false;" >
-        <header class="htmleaf-header">
-        <h1>Duck Shooter in Nebulas<span><br><font color="red">游戏说明：1.点击开始PLAY，在弹出框中输入玩家昵称，确定开始游戏。<br>2.键盘上下左右控制准星，空格键开枪，打中鸭子可以获得相应的积分。<br>游戏结束后可以上传积分，并显示在游戏榜中。</font></span></h1><br>
-        <div class="icon-xingyun">
-                        <span>
-                                <h2>Power By</h2><img src="./img/icon-xingyun1.png">
-                        </span>
+    <title>区块链打飞鸭升级版</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- siimple style -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/createjs-2014.12.12.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="./dist/nebulas.js"></script>
+    <script type="text/javascript" src="./dist/nebPay.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+
+    <div class="cloud floating">
+        <img src="assets/img/cloud.png" alt="Scoop Themes">
+    </div>
+
+    <div class="cloud pos1 fliped floating">
+        <img src="assets/img/cloud.png" alt="Scoop Themes">
+    </div>
+
+    <div class="cloud pos2 floating">
+        <img src="assets/img/cloud.png" alt="Scoop Themes">
+    </div>
+
+    <div class="cloud pos3 fliped floating">
+        <img src="assets/img/cloud.png" alt="Scoop Themes">
+    </div>
+
+
+    <div id="wrapper">
+        <div class="container">
+            <img src="assets/img/logo.png" alt="Scoop Themes Logo" class="duck-header-image">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <canvas id="canvas" class='ani_hack' width="1024" height="768" > </canvas>
                 </div>
-                <div class="noExtension" id="noExtension">
-                                友情提示：使用前请确保已经安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云链钱包</a> 喔~
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                        <p>Copyright © 2018 same163 - Design: <a rel="nofollow" href="#" target="_parent">same163</a></p>
+                    </p>
                 </div>
-        </header>
-          <script>
-                var dappContactAddress;
-                var serialNumber;
-                var NebPay
-                var nebPay
-                var nebulas
-                dappContactAddress = "n1qX6YR18TSS8ZCF7wce5bN3YETZJpJaDjg";
-                nebulas = require("nebulas"), neb = new nebulas.Neb();
-                neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
-                
-                NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
-                nebPay = new NebPay();
-
-
-            $(document).ready(function(){
-                     var oMain = new CMain({
-                                            scope_accelleration:2,    //SCOPE ACCELLERATION
-											scope_friction:0.85,      //SCOPE FRICTION
-											max_scope_speed:40,       //MAXIMUM SCOPE SPEED
-											num_bullets:3,            //NUMBER OF PLAYER BULLETS FOR EACH SHOT LEVEL
-											hit_score: 100,           //POINTS GAINED WHEN DUCK IS HITTEN
-											bonus_time:4000,          //BONUS TIME IN MILLISECONDS
-											lives:4,                  //NUMBER OF PLAYER LIVES
-											duck_increase_speed: 0.5, //INCREASE THIS VALUE TO SPEED UP DUCKS AFTER EACH LEVEL SHOT
-											duck_occurence: [ 1,  //NUMBER OF DUCKS IN SHOT 1
-															  1,  //NUMBER OF DUCKS IN SHOT 2
-															  1,  //NUMBER OF DUCKS IN SHOT 3
-															  1,  //NUMBER OF DUCKS IN SHOT 4
-															  1,  //NUMBER OF DUCKS IN SHOT 5
-															  2,  //NUMBER OF DUCKS IN SHOT 6
-															  2,  //NUMBER OF DUCKS IN SHOT 7
-															  2,  //NUMBER OF DUCKS IN SHOT 8
-															  2,  //NUMBER OF DUCKS IN SHOT 9
-															  3   //NUMBER OF DUCKS IN SHOT 10
-																  //ADD NEW DUCK OCCURENCE HERE IF YOU NEED...
-															]
-                                           });
-                      
-                     $(oMain).on("game_start", function(evt) {
-                             //alert("game_start");
-                             value = prompt('输入你的名字：', '打酱油的');  
-                             if(value == null){  
-                                        alert('你取消了输入！再来一次~');  
-                                        window.location.reload()
-                                }else if(value == ''){  
-                                        alert('姓名输入为空，请重新输入！');  
-                                        window.location.reload()
-                                }else{  
-                                        alert('你好，'+value);  
-                                        updatePlayName(value);
-                                }  
-                     });
-
-                     $(oMain).on("save_score", function(evt,iScore) {
-                             alert("您的得分为: "+iScore + "，请确认上链受人膜拜~");
-                             updatePlayScore(iScore)
-                     });
-
-                     $(oMain).on("restart", function(evt) {
-                             alert("restart");
-                     });
-           });
-
-           function updatePlayName(name){
-                var to = dappContactAddress;
-                var value = "0";
-                var callFunction = "updatePlayName";
-                var callArgs = "[\"" + name + "\"]";
-                console.log(callArgs);
-                serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
-                        listener: function (resp) {
-                                console.log("thecallback is " + resp)
-                        }
-                });
-           }
-
-           function updatePlayScore(score){
-                var to = dappContactAddress;
-                var value = "0";
-                var callFunction = "updatePlayScore";
-                var callArgs = "[\"" + score + "\"]";
-                console.log(callArgs);
-                serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
-                        listener: function (resp) {
-                                console.log("thecallback is " + resp)
-                        }
-                }); 
-           }
-
-           function getPlayersInfo(){
-                var from = dappContactAddress;
-                var value = "0";
-                var nonce = "0";
-                var gas_price = "1000000";
-                var gas_limit = "20000000";
-                var callFunction = "getPlayersInfo";
-                var callArgs = "";
-                //console.log("callFunction:" + callFunction + " callArgs:" + callArgs);
-                var contract = {
-                "function": callFunction,
-                "args": callArgs
-                };
-                neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
-                var result = resp.result;   
-                console.log("result : " + result);
-                result = JSON.parse(result);
-                var html = "";
-                                var itemList = result;
-                                console.log(itemList);
-                for(var i = 0, iLen = itemList.length; i < iLen; i++) {
-                        html += '<li>' +
-                                        '<p class="item-content"><font color="red">玩家：'+ itemList[i].from + '<br>分数：' + itemList[i].score + '<br>昵称：' + itemList[i].name + '</font></p>' +
-                                                        '</li>';
-                                                        console.log(html);
-                }
-                $('#itemList').append(html);
-                }).catch(function (err) {
-                console.log("error :" + err.message);
-                })
-           }
-           getPlayersInfo()
-        </script>
-        <div style = "height: 800px">
-        <canvas id="canvas" class='ani_hack' width="1024" height="768" > </canvas>
+            </div>
         </div>
-        <div class="rank-list-container">
-                        <h4>大神排行榜（显示单个玩家的最高分数）</h4>
-                        <ul class="rank-list" id="itemList">
+    </div>
+</body>
 
-                        </ul>
-        </div>
-        <div class="footer">
-                <p>Copyright © 2018 same163 - Design: <a rel="nofollow" href="#" target="_parent">same163</a></p>
-                <p>感谢支持，欢迎大家关注星云链，发现更多更好DAPP</p>
-        </div>
-    </body>
 </html>

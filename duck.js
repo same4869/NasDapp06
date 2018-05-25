@@ -38,7 +38,6 @@ DuckPlayerItems.prototype ={
 
     updatePlayScore:function(score){
         var from = Blockchain.transaction.from;
-
         var duckPlayerItem = this.duckers.get(from);
 
         if (!duckPlayerItem) {
@@ -56,14 +55,6 @@ DuckPlayerItems.prototype ={
         }
 
         this.duckers.put(from,duckPlayerItem);
-
-    },
-
-    getScoreByPlayer:function(from){
-        if(!from){
-            throw new Error("没查到这个玩家")
-        }
-        return this.duckers.get(from);
     },
 
     getPlayersInfo:function(){
@@ -75,7 +66,15 @@ DuckPlayerItems.prototype ={
             info.push(this.duckers.get(key))
         }
         return info;
+    },
+
+    getScoreByPlayer:function(from){
+        if(!from){
+            throw new Error("没有这个游戏玩家")
+        }
+        return this.duckers.get(from);
     }
+
 }
 
 module.exports = DuckPlayerItems;

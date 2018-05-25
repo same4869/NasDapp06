@@ -5,7 +5,9 @@
     Description:
         Purpose of the stylesheet follows.
 */
-
+html {
+    overflow: hidden;
+}
 root { 
     display: block;
 }
@@ -28,15 +30,6 @@ body{
 ::selection { background: transparent;color:inherit; }
 ::-moz-selection { background: transparent;color:inherit; }
 
-#canvas{
-    width:768px;
-    height: 1024px;
-    
-    position: absolute;
-    
-    
-}
-
 canvas {
     image-rendering: optimizeSpeed;
     image-rendering:-o-crisp-edges;
@@ -46,9 +39,11 @@ canvas {
 }
 
 .ani_hack{
+    max-height: 500px;
+    max-width: 700px;
+    /* background-color: black; */
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
-    
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -89,7 +84,7 @@ canvas {
     margin-top: 0px;
 }
 .icon-xingyun span img {
-    width: 180px;
+    width: 100px;
 }
 .rank-list-container {
     margin-left: 40px
@@ -115,4 +110,7 @@ canvas {
     font-weight: normal;
     font-style: normal;
 
+}
+.duck-header-image {
+    margin-bottom: 30px;
 }
