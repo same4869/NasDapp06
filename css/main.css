@@ -127,6 +127,7 @@ canvas {
     background-color: greenyellow;
     overflow: auto;
     max-height: 450px;
+    border-radius: 10px;
 }
 .rank-list-table tr {
     height: 35px;
@@ -140,5 +141,21 @@ canvas {
 }
 .rank-list-table .score {
     width: 40%;
+}
+.tips {
+    width: 225px;
+    margin-left: -110px;
+    height: fit-content;
+    margin-top: -50px;
+}
+.tips p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.tips-content {
+    padding: 10px 10px;
+    background-color: greenyellow;
+    border-radius: 10px;
 }
 
