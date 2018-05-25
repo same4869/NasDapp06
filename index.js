@@ -157,13 +157,9 @@ $(document).ready(function(){
                                 var itemList = result;
                                 console.log(itemList);
                 for(var i = 0, iLen = itemList.length; i < iLen; i++) {
-                        html += "<li class='player-item'>" +
-                                        "<div class='item-content'>" +
-                                                "<div class='row-item'><span class='name'>昵称: </span><span>" + itemList[i].name + "</span></div>" +
-                                                "<div class='row-item'><span class='score'>得分: </span><span>" + itemList[i].score + "</span></div>" +
-                                                "<div class='row-item'><span class='address'>ID: </span><span>" + itemList[i].from + "</span></div>" +
-                                        "</div>" +
-                                "</li>"
+                        html += "<tr><td class='index-icon'>" + (i+1) +"</td>" +
+                                "<td class='name'>" + itemList[i].name +"</td>" +
+                                "<td class='score'>" + itemList[i].score +"</td></tr>";
                         console.log(html);
                 }
                 $('#itemList').append(html);

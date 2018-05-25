@@ -118,11 +118,27 @@ canvas {
 .rank-list-container {
     display: inline-block;
     max-width: 200px;
+    margin-top: -50px;
+    margin-right: -50px;
 }
-.player-item span {
-    word-wrap: break-word;
-    text-align: left;
+.rank-list-table {
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    overflow: auto;
+    max-height: 450px;
 }
-.player-item .row-item {
-    text-align: left;
+.rank-list-table tr {
+    height: 35px;
+    line-height: 35px;
 }
+.rank-list-table .index-icon {
+    width: 20%;
+}
+.rank-list-table .name {
+    width: 40%;
+}
+.rank-list-table .score {
+    width: 40%;
+}
+
